@@ -11,3 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.drop-zone-class {
+  margin:auto;
+  height: 100%;
+  width: 50%;
+  padding-top: 15px;
+}
+
+.upload-button {
+  padding-top: 15px;
+  width: 200px;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
