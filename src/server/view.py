@@ -2,11 +2,11 @@ import pathlib
 import os
 import sys
 
-folder = '../../uploads'
+folder = '../uploads'
+dir_names=[]
+dir_paths=[]
 
-def get_files():
-    dir_names=[]
-    dir_paths=[]
+def get_files():   
     for content in os.scandir(folder):
         if content.is_dir():
             dir_names.append(os.path.basename(content.path))
@@ -14,19 +14,19 @@ def get_files():
     
     for dir in dir_names:
         print(dir)
-    # print(dir_names)
-    # print(dir_paths)
 
 
-def view_file():
-    pass
-    
+def return_path(filename):
+    for content in os.scandir(folder):
+        if content.is_dir() and os.path.basename(content.path) == filename:
+            print(content.path)
+
 
 arg = sys.argv[1]
-if arg == 'query':
+if arg == "":
     get_files()
 else:
-    view_file()
+    return_paths(arg)
 
 
 # get_files()

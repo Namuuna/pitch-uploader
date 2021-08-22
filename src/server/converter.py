@@ -8,7 +8,7 @@ class Converter:
         self.filename = filename
         self.name = None
         self.type = None
-        self.folder = '../../uploads'
+        self.folder = '../uploads'
 
     def get_file_type(self):
         name, type = os.path.splitext(self.filename)
